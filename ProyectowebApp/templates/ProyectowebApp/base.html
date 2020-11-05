@@ -1,0 +1,96 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+    
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Valorant informacion</title>
+    <!--??? IMAGEN DEL ICONO NAVE ???-->
+    <link rel="shortcut icon" href="{% static 'ProyectowebApp/img/ICONO_VALORANT.jpg' %}" type="image/x-icon">
+    <!--??? LINK PARA CONECTAR CSS ???-->
+    <link rel="stylesheet" href="{% static 'ProyectowebApp/css/estilos.css' %}">
+    <link rel="stylesheet" href="{% static 'ProyectowebApp/css/styleForm.css' %}">
+    <link rel="stylesheet" href="{% static 'ProyectowebApp/css/galeria.css' %}">
+    <link rel="stylesheet" href="{% static 'ProyectowebApp/css/Estilo EJ.css' %}">
+    <link rel="stylesheet" href="{% static 'ProyectowebApp/css/login.css' %}">
+        
+
+    <link href="https://fonts.googleapis.com/css?family=Raleway:500,700,800,900&amp;display=swap" rel="stylesheet">
+</head>
+
+
+<body>
+    <div class="day">
+    <header>
+        <!--??? NAV PARA REFERENCIAS COSTADO SUPERIOR DERECHO ???-->
+        <nav>
+            <a href="index">Inicio</a>
+            <a href="acerca">Acerca de Valorant</a>
+            <a href="formulario">Formulario</a>
+            <a href="Iniciar sesion/Registrarse">Formulario</a>
+        </nav>
+        
+        <section class="textos-header">
+            <h1>Obten la informacion mas pulenta de valorant</h1>
+            <h2>ya tu shabe</h2>
+        </section>
+        <div class="wave" style="height: 150px; overflow: hidden;"><svg viewBox="0 0 500 150" preserveAspectRatio="none"
+                style="height: 100%; width: 100%;">
+                <path d="M0.00,49.98 C150.00,150.00 349.20,-50.00 500.00,49.98 L500.00,150.00 L0.00,150.00 Z"
+                    style="stroke: none; fill: rgb(19, 3, 3);"></path>
+            </svg></div>
+
+
+            <div class="toggleButton">
+                <div class="border">
+                        <div class="button">
+                            
+                        </div>
+                    </div>
+            </div>
+    </header>
+    
+
+        <!---contenido cambiante-->
+        <!-- personajes -->
+        {% block content %}
+
+
+        {% endblock %}
+        
+    <footer>
+        <div class="contenedor-footer">
+            <div class="content-foo">
+                <h4>Fono</h4>
+                <p>2-265443211</p>
+            </div>
+            <div class="content-foo">
+                <h4>Email</h4>
+                <p>patricio.hernandez@profesores.duoc.cl</p>
+            </div>
+            <div class="content-foo">
+                <h4>Location</h4>
+                <p>01001000 </p>
+                <p>01101111 </p>    
+                <p>01101100 </p>
+                <p>01100001 </p>
+                <p>00100000 </p>
+                <p>01101101 01110101 01101110 01100100 01101111</p>
+            </div>
+        </div>
+        <h2 class="titulo-final">&copy; Saludos Profe Ale </h2>
+    </footer>
+    </div>
+
+	<script src="https://unpkg.com/web-animations-js@2.3.2/web-animations.min.js"></script>
+    <script src="https://unpkg.com/muuri@0.8.0/dist/muuri.min.js"></script>
+    <script src="{% static 'ProyectowebApp/js/Principal.js' %} "></script>
+
+
+</body>
+</html>

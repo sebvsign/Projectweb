@@ -1,0 +1,117 @@
+{% extends "ProyectowebApp/base.html" %}
+{% load static %}
+
+{% block content %}
+        <section class="textos-header">
+            <h1>Acerca de Valorant</h1>
+            <br></br>
+            <h2>Te contare todo lo que debes saber</h2>
+        </section>
+        </div>    
+    </header>
+    <main>
+        
+            <section class="contenedor-acerca-valorant">
+            
+            <div class="contenedor-acerca-valorant">
+                <img src="{% static 'ProyectowebApp/img/Valorant.png' %}" alt="" class="imagen-about-us">
+                <!--??? SE PUEDE MODIFCAR EN CSS QUE SE ENCUENTRA SU CLASE ???-->
+                <div class="contenido-textos">
+                    <div class="logo">
+                        <h2 class="titulo">Valorant</h2>
+                    </div>
+                    
+                    <h3><span>1</span>¿Que es Valorant?</h3>
+                    <p>Valorant es un videojuego de disparos en primera persona multijugador gratuito Lanzado el 2 de junio de 2020</p>
+                    <h3><span>2</span>¿Quien lo desarrollo?</h3>
+                    <p>La empresa RIOTGAMES mas conocido por su videojuego league of legends se dedica a desarrollar Valorant</p>
+                    
+                </div>
+            </div>
+        </section>
+            <div id="requisitos-valorant">
+                
+                <table>
+                    <caption>Requisitos para jugar Valorant</caption>
+                    <thead>
+                        <tr>
+                        <th></th>  
+              
+                        <th>30 fps</th>
+              
+                        <th>60 fps</th>
+              
+                        <th>144fps o +</th>
+
+                    </thead>
+                </tr>
+              
+                <tr>
+              
+                  <td>Procesador</td>
+              
+                  <td>Intel Core 2 Duo E8400</td>
+              
+                  <td>Intel i3-4150</td>
+
+                  <td>Intel core i5-4460 3.2 GHZ</td>
+              
+                </tr>
+              
+                <tr>
+              
+                  <td>Gráfica</td>
+              
+                  <td>Intel HD 4000</td>
+              
+                  <td>Geforce GT 730</td>
+                    
+                  <td>GTX 1050Ti</td>
+                </tr>
+              
+                <tr>
+              
+              </table>
+            <div class="cuerpo-acerca-valorant">
+                <div class="cuerpo">
+                    <h2 class="titulo2"> Cual es su jugabilidad</h2>
+                    <p> Dos equipos de cinco jugadores cada uno disputan partidas al mejor de 24 rondas. 
+                    Una ronda se gana eliminando al equipo rival al completo o detonando o desactivando una bomba llamada Spike. 
+                    Dependiendo de la ronda, un conjunto defiende una serie de puntos donde se puede activar el artefacto explosivo y el otro equipo debe tratar de abrirse paso para poder
+                    plantar dicha bomba.
+                    </p>
+                    <br></br>
+                    <p>Una ronda dura algo menos de dos minutos y en ese tiempo, los jugadores deben cumplir sus objetivos a rajatabla.
+                    A su vez, cada ronda se divide en dos fases, una de compra, donde los jugadores se equipan con diferentes armas, puntos de habilidad y escudos para afrontar el inminente 
+                    conflicto y una fase de ataque o defensa (dependiendo del bando). 
+                    Si mueres, no podrás reaparecer hasta la siguiente ronda, por lo que cada decisión tomada tiene una importancia vital. 
+                    Si sobrevives a la ronda, comenzarás con el arma que compraste, los puntos de habilidad que no has usado y el escudo que no hayas perdido. 
+                    Como podemos ver, se premia a los mejores jugadores, pero también existe la posibilidad de redimirse a cada ronda</p>
+                    <br></br>
+                    <p>Valorant se centra en la habilidad, la puntería y el posicionamiento de los jugadores. 
+                    El control de zonas, ángulos muertos y el tira y afloja es lo primero que debe entender un jugador para poder sacar el máximo jugo al título.
+                    Este shooter se basa en la estrategia y si no has probado Counter Strike, en seguida te darás cuenta de que no se puede ir como pollo sin cabeza, 
+                    aquí hay que jugar en equipo y quien no lo haga, no logrará hacerse con la victoria.</p>    
+                </div>  
+                
+
+            </div>
+        
+            <section class="Video-valorant">
+                <div class="Video-valorant">
+                    <video class="Mover-video" src="{% static 'ProyectowebApp/video/video3.mp4' %}" autoplay="" muted="" loop="">
+
+                    </video>
+                </div>
+                
+                <div class="Texto-centrado">
+                        <h1>Descarga ahora</h1>
+                    </div>
+                    <div class="imagen-descarga">
+                        <a href="https://valorant.secure.dyn.riotcdn.net/channels/public/x/installer/current/live.live.eu.exe">
+                            <img class="imagen-descarga-reducida" src="{% static 'ProyectowebApp/img/ICONO_VALORANT.jpg' %}" alt="">
+                        </a>
+                    </div>
+        </section>
+        <script src="{% static 'ProyectowebApp/js/NocAcerca.js'%}"></script>
+        {% endblock %}

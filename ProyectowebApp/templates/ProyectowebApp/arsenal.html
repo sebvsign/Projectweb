@@ -1,0 +1,535 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.8">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Acerca de valorant</title>
+    <!--??? IMAGEN DEL ICONO NAVE ???-->
+    <link rel="shortcut icon" href="{% static 'ProyectowebApp/img/ICONO_VALORANT.jpg' %}" type="image/x-icon">
+    <!--LINK PARA ICONOS-->
+    <script src="https://kit.fontawesome.com/11ea944068.js" crossorigin="anonymous"></script>
+    <!--??? LINK PARA CONECTAR CSS ???-->
+
+    <link rel="stylesheet" href="{% static 'ProyectowebApp/css/galeria.css' %}">
+    <!--??? ESTILO DE LA LETRA ???-->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700,800&display=swap" rel="stylesheet">
+
+    <link href="https://fonts.googleapis.com/css?family=Raleway:700,800,900&amp;display=swap" rel="stylesheet">
+    <div class="day">
+
+
+</head>
+
+<body>
+    <header>
+        
+        <div class="contenedor-principal">
+            <!--??? NAV PARA REFERENCIAS COSTADO SUPERIOR DERECHO ???-->
+            <nav>
+                <a href="index">Inicio</a> |
+                <a href="acerca">Acerca de Valorant</a> |
+                <a href="formulario">Formulario</a>
+            </nav>
+            <!--??? ESTILO DE LA LETRA ???-->
+            <section class="textos-header">
+                <h1>Bienvenid@ al arsenal de Valorant</h1>
+            </section>
+            <div class="wave" style="height: 150px; overflow: hidden;"><svg viewBox="0 0 500 150"
+                    preserveAspectRatio="none" style="height: 100%; width: 100%;">
+                    <path d="M0.00,49.98 C150.00,150.00 349.20,-50.00 500.00,49.98 L500.00,150.00 L0.00,150.00 Z"
+                        style="stroke: none; fill: rgb(19, 3, 3);"></path>
+                </svg></div>
+            <div class="toggleButton">
+                <div class="border">
+                        <div class="button">
+                                
+                        </div>
+                    </div>
+            </div>
+
+        </div>
+
+
+
+        <div class="contenedor-armas">
+            <header>
+                <div class="ARMS">
+                    <h1>Armas de valorant</h1>
+                    <p>Por categoria</p>
+                </div>
+                <form action="">
+                    <input type="text" class="barra-busqueda" id="barra-busqueda" placeholder="Buscar">
+                </form>
+                <div class="categorias" id="categorias">
+                    <a href="#" class="activo">Todas</a>
+                    <a href="#">Pistolas</a>
+                    <a href="#">Smgs</a>
+                    <a href="#">Escopetas</a>
+                    <a href="#">Rifles</a>
+                    <a href="#">Snipers</a>
+                    <a href="#">Armas Pesadas</a>
+                    <a href="#">Melee</a>
+
+                </div>
+
+            </header>
+
+            <section class="grid-armas" id="grid-armas">
+                <div class="item" 
+                    data-categoria="pistolas" 
+                    data-etiquetas="classic pistolas pistola"
+                    data-descripcion="El modo de disparo principal 
+                    es preciso si no se está en movimiento, 
+                    y también dispone de un modo de disparo en 
+                    ráfaga para los encuentros cuerpo a cuerpo.">
+                    <div class="item-contenido">
+                        <img src="{% static 'ProyectowebApp/img/armas/classic.png' %}" alt="">
+                        <h2 class="nombreArma">Classic</h2>
+                    </div>
+                </div>
+
+                <div class="item" 
+                    data-categoria="pistolas" 
+                    data-etiquetas="shorty pistolas pistola"
+                    data-descripcion="Se trata de una escopeta ligera de barril corto que resulta letal cuerpo a cuerpo pero solo puede dispararse dos veces antes de tener que recargarla. 
+                    Complementa de maravilla a las armas de larga distancia.">
+                    <div class="item-contenido">
+                        <img src="{% static 'ProyectowebApp/img/armas/shorty.png' %}" alt="">
+                        <h2 class="nombreArma">Shorty</h2>
+                    </div>
+                </div>
+
+
+                <div class="item" 
+                    data-categoria="pistolas" 
+                    data-etiquetas="frenzy pistolas"
+                    data-descripcion="Se trata de una pistola ametralladora ligera que destaca a la hora de disparar en movimiento. 
+                    Tiene una velocidad de disparo muy alta, 
+                    pero es difícil de controlar, 
+                    así que a media distancia es mejor apostar por ráfagas cortas.">
+                    <div class="item-contenido">
+                        <img src="{% static 'ProyectowebApp/img/armas/frenzy.png' %}" alt="">
+                        <h2 class="nombreArma">Frenzy</h2>
+                    </div>
+                </div>
+                <div class="item" 
+                    data-categoria="pistolas" 
+                    data-etiquetas="Ghost pistola pistolas"
+                    data-descripcion="La Ghost cuenta también con un amplio cargador por si lo necesitas. 
+                    Si el objetivo está lejos, tendras que controlar la velocidad de disparo. 
+                    Pulsa el gatillo con rapidez cuando los tengas cerca.">
+                    <div class="item-contenido">
+                        <img src="{% static 'ProyectowebApp/img/armas/ghost.png' %}" alt="">
+                        <h2 class="nombreArma">Ghost</h2>
+                    </div>
+                </div>
+
+                <div class="item" 
+                    data-categoria="pistolas" 
+                    data-etiquetas="Sheriff pistolas pistola"
+                    data-descripcion="Sus poderosos disparos causan un retroceso pronunciado y dominar esta arma requiere dedicación.
+                    
+                    Si la disparas con precisión, Tus enemigos correrán." >
+                    <div class="item-contenido">
+                        <img src="{% static 'ProyectowebApp/img/armas/sheriff.png' %}" alt="">
+                        <h2 class="nombreArma">Sheriff</h2>
+                    </div>
+                </div>
+
+
+
+                <div class="item" 
+                    data-categoria="smgs" 
+                    data-etiquetas="Smgs Smg Stinger ametralladora ametralladoras"
+                    data-descripcion="Este subfusil es más potente a media y larga distancia que el resto, pero para ello sacrifica parte de su velocidad de disparo y movilidad.
+                    El cargador de 20 balas puede vaciarse en un abrir y cerrar de ojos si te dejas llevar por el retroceso, pero también te permitirá acertar disparos letales a distancias medias con la ayuda de la mira y un disparo controlado.">
+                    <div class="item-contenido">
+                        <img src="{% static 'ProyectowebApp/img/armas/stinger.png'%}" alt="">
+                        <h2 class="nombreArma">Stinger</h2>
+                    </div>
+                </div>
+
+                <div class="item" 
+                    data-categoria="smgs" 
+                    data-etiquetas="Smgs Smg spectre espectre"
+                    data-descripcion="Es un arma todoterreno con estadísticas de daño, velocidad de disparo y precisión muy equilibradas tanto a distancias cortas como medias.
+
+                    Acecha en las esquinas de todos los mapas y, si tienes buen pulso, te permitirá acabar con tus enemigos desde lejos.">
+                    <div class="item-contenido">
+                        <img src="{% static 'ProyectowebApp/img/armas/spectre.png' %}" alt="">
+                        <h2 class="nombreArma">Spectre</h2>
+                    </div>
+                </div>
+
+                <div class="item" 
+                    data-categoria="escopetas" 
+                    data-etiquetas="escopeta Bucky"
+                    data-descripcion="Pesada pero estable, el modo de disparo principal de la Bucky ayuda a vigilar esquinas en espacios reducidos y resulta ideal para cargar contra los enemigos cuerpo contra cuerpo. El modo de disparo alternativo es preciso a media distancia.">
+                    <div class="item-contenido">
+                        <img src="{% static 'ProyectowebApp/img/armas/bucky.png'%}" alt="">
+                        <h2 class="nombreArma">Bucky</h2>
+                    </div>
+                </div>
+
+                <div class="item" 
+                    data-categoria="escopetas" 
+                    data-etiquetas="judge escopeta escopetas "
+                    data-descripcion="La Judge es un arma estable, pero se vuelve volátil si se dispara con mucha rapidez.
+
+                    El modo de disparo principal es perfecto para las distancias cortas; si queréis acertar a objetivos a más de un metro de distancia, tendréis que apuntar con calma y precisión.">
+                    <div class="item-contenido">
+                        <img src="{% static 'ProyectowebApp/img/armas/judge.png' %}" alt="">
+                        <h2 class="nombreArma">Judge</h2>
+                    </div>
+                </div>
+
+                <div class="item" 
+                    data-categoria="rifles" 
+                    data-etiquetas="rifles rifle Bulldog"
+                    data-descripcion="Una vez que aprendes a decidir cuándo disparar, se trata de una apuesta segura. El modo alternativo dispone de una mira que te permite disparar ráfagas cortas con precisión a media y larga distancia.">
+                    <div class="item-contenido">
+                        <img src="{% static 'ProyectowebApp/img/armas/bulldog.png' %}" alt="">
+                        <h2 class="nombreArma">Bulldog</h2>
+                    </div>
+                </div>
+
+                <div class="item" 
+                    data-categoria="rifles" 
+                    data-etiquetas="guardian rifles rifle"
+                    data-descripcion="Es el rifle para tiradores por excelencia. Es más pesado y cuenta con menos movilidad que los demás, pero también preciso y potente. Perfecto para cazar cabezas a larga y media distancia.">
+                    <div class="item-contenido">
+                        <img src="{% static 'ProyectowebApp/img/armas/guardian.png' %}" alt="">
+                        <h2 class="nombreArma">Guardian</h2>
+                    </div>
+                </div>
+
+                <div class="item" 
+                    data-categoria="rifles" 
+                    data-etiquetas="Phantom rifle rifles"
+                    data-descripcion="El modo automático es perfecto para los encuentros en espacios reducidos, mientras que las ráfagas cortas son la opción indicada en cualquier otra situación. Es mucho más precisa si no se dispara en movimiento.">
+                    <div class="item-contenido">
+                        <img src="{% static 'ProyectowebApp/img/armas/phantom.png' %}" alt="">
+                        <h2 class="nombreArma">Phantom</h2>
+                    </div>
+                </div>
+
+                <div class="item" 
+                    data-categoria="rifles" 
+                    data-etiquetas="Vandal rifle rifles"
+                    data-descripcion="va perdiendo estabilidad con el tiempo de disparo. El Vandal inflige mucho daño a larga distancia y es ideal para aquellos que se centran en acertar tiros a la cabeza.">
+                    <div class="item-contenido">
+                        <img src="{% static 'ProyectowebApp/img/armas/vandal.png' %}" alt="">
+                        <h2 class="nombreArma">Vandal</h2>
+                    </div>
+                </div>
+
+
+                <div class="item" 
+                    data-categoria="snipers" 
+                    data-etiquetas="Marshall sniper snipers"
+                    data-descripcion="Se trata de un fusil de francotirador ligero con una sola opción de zoom que mantendrá a los enemigos a raya. Eso sí, la baja velocidad de disparo garantiza que, si no aciertas en el objetivo, quedas expuesto.">
+                    <div class="item-contenido">
+                        <img src="{% static 'ProyectowebApp/img/armas/marshal.png' %}" alt="">
+                        <h2 class="nombreArma">Marshall</h2>
+                    </div>
+                </div>
+
+                <div class="item" 
+                    data-categoria="snipers" 
+                    data-etiquetas="Operator sniper snipers"
+                    data-descripcion="El Operator es un fusil de francotirador de cerrojo muy potente con zoom dual. Cuenta con una movilidad nula, pero sus balas derribarán a cualquiera de un solo impacto.">
+                    <div class="item-contenido">
+                        <img src="{% static 'ProyectowebApp/img/armas/operator.png' %}" alt="">
+                        <h2 class="nombreArma">Operator</h2>
+                    </div>
+                </div>
+
+                <div class="item" 
+                    data-categoria="armas pesadas" 
+                    data-etiquetas="machine guns armas_pesadas Ares"
+                    data-descripcion="El gran cargador de la Ares significa que se le da de maravilla el fuego continuo e infligir grandes cantidades de daño a grupos de enemigos">
+                    <div class="item-contenido">
+                        <img src="{% static 'ProyectowebApp/img/armas/ares.png' %}" alt="">
+                        <h2 class="nombreArma">Ares</h2>
+                    </div>
+                </div>
+
+                <div class="item" 
+                    data-categoria="armas pesadas" 
+                    data-etiquetas="machine guns armas_pesadas Odin"
+                    data-descripcion="Dispara de forma continua e inflige mucho daño con una estabilidad sorprendente. 
+                    Cubre de balas a los enemigos en espacios reducidos o recurre al modo alternativo para que te conviertas en una torreta andante.">
+                    <div class="item-contenido">
+                        <img src="{% static 'ProyectowebApp/img/armas/odin.png' %}" alt="">
+                        <h2 class="nombreArma">Odin</h2>
+                    </div>
+                </div>
+
+                
+
+                <div class="item" 
+                    data-categoria="melee" 
+                    data-etiquetas="melee cuchilla cuerpoacuerpo"
+                    data-descripcion="Si no te quedan balas, siempre tienes tu navaja. 
+                    Te permite correr con rapidez, 
+                    destruir objetos mucho más rápido y acabar con enemigos por la espalda de una sola cuchillada si usas el modo alternativo con disparo secundario.">
+                    <div class="item-contenido">
+                        <img src="{% static 'ProyectowebApp/img/armas/tactical-knife.png' %}" alt="">
+                        <h2 class="nombreArma">cuchillo</h2>
+                    </div>
+                </div>
+
+
+
+
+
+
+
+            </section>
+
+
+            <section class="overlay-armas" id="overlay-armas">
+                <div class="contenedor-img-armas">
+                    <button id="btn-cerrar-ventana"><i class="fas fa-times"></i></button>
+                    <img src="" alt="">
+                    
+                </div>
+                <p class="descripcion-arma"></p>
+            </section>
+
+
+
+
+        </div>
+
+    </header>
+
+    <header>
+        <div class="table-container">
+            <h2 class="subtitle">Estas son las armas que recomendamos comprar y cuándo comprarlas</h2>
+            <table class="w-table w-table-scroll" cellpadding="0" cellspacing="0" width="100%">
+                <thead>
+                    <tr>
+                        <th>
+                            <p>Arma </p>
+                        </th>
+                        <th>
+                            <p>Precio</p>
+                        </th>
+                        <th>
+                            <p>Cuando comprarlo </p>
+                        </th>
+                        <th>
+                            <p>Tipo de arma</p>
+                        </th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>
+                            <p>Ghost</p>
+                        </td>
+                        <td>
+                            <p>¤500 </p>
+                        </td>
+                        <td>
+                            <p>- En la primera ronda de cada lado.<br />
+                                - Para acompañar a tu arma principal.</p>
+                        </td>
+                        <td>
+                            <p>Arma secundaria - Pistola</p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <p>Sheriff</p>
+                        </td>
+                        <td>
+                            <p>¤800 </p>
+                        </td>
+                        <td>
+                            <p>- Para acompañar mejor a tu arma principal.<br />
+                                - En rondas semi-armadas para ir a jugar duelos.<br />
+                                - Reemplazar un arma principal débil si el equipo rival tiene escudos</p>
+                        </td>
+                        <td>
+                            <p>Arma secundaria - Pistola</p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <p>Bucky </p>
+                        </td>
+                        <td>
+                            <p>¤900 </p>
+                        </td>
+                        <td>
+                            <p>- En elo bajo y medio donde la economía es caótica y tiempo
+                                para matar es mayor</p>
+                            <p>- A corta y media distancia, por supuesto.<br />
+                                - Para una contra eco o una pequeña compra</p>
+                        </td>
+                        <td>
+                            <p>Arma principal - Escopeta</p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <p>Stinger</p>
+                        </td>
+                        <td>
+                            <p>¤1000 </p>
+                        </td>
+                        <td>
+                            <p>- En la segunda ronda de cada lado o en pequeñas
+                                compras.<br />
+                                - Para jugar a media distancia y mantener la línea </p>
+                        </td>
+                        <td>
+                            <p>Arma principal - subfusil</p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <p>Marshall</p>
+                        </td>
+                        <td>
+                            <p>¤1100 </p>
+                        </td>
+                        <td>
+                            <p>- Enfrentarse a adversarios lógicamente sin escudos<br />
+                                - Para compensar o mantener largas líneas </p>
+                        </td>
+                        <td>
+                            <p>Arma principal - rifle de francotirador</p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <p>Bulldog </p>
+                        </td>
+                        <td>
+                            <p>¤2,100 </p>
+                        </td>
+                        <td>
+                            <p>- Para competir contra rifles de bajo coste.</p>
+                        </td>
+                        <td>
+                            <p>Arma principal - fusil</p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <p>Guardian</p>
+                        </td>
+                        <td>
+                            <p>¤2,700 </p>
+                        </td>
+                        <td>
+                            <p>- Para mantener líneas<br />
+                                - Bueno en un papel de apoyo </p>
+                        </td>
+                        <td>
+                            <p>Arma principal - fusil</p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <p>Phantom</p>
+                        </td>
+                        <td>
+                            <p>¤2,900 </p>
+                        </td>
+                        <td>
+                            <p>- Mejor que Vandal para combate cuerpo a cuerpo y medio. </p>
+                        </td>
+                        <td>
+                            <p>Arma principal - fusil</p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <p>Vandal</p>
+                        </td>
+                        <td>
+                            <p>¤2,900 </p>
+                        </td>
+                        <td>
+                            <p>- El rifle más mortífero y versátil. Una apuesta segura </p>
+                        </td>
+                        <td>
+                            <p>Arma principal - fúsil</p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <p>Operator</p>
+                        </td>
+                        <td>
+                            <p>¤4,500 </p>
+                        </td>
+                        <td>
+                            <p>- Tan pronto como sepas cómo usarlo, probablemente el mejor
+                                arma del juego</p>
+                        </td>
+                        <td>
+                            <p>Arma principal - rifle de francotirador</p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <p>Odin </p>
+                        </td>
+                        <td>
+                            <p>¤ 3,200 </p>
+                        </td>
+                        <td>
+                            <p>- Dentro de una composición y estrategia particular<br />
+                                - Toma todo su sentido a través de obstáculos </p>
+                        </td>
+                        <td>
+                            <p>Arma principal - Ametralladora pesada</p>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+    </header>
+
+
+
+
+    <footer>
+        <div class="contenedor-footer">
+            <div class="content-foo">
+                <h4>Fono</h4>
+                <p>2-265443211</p>
+            </div>
+            <div class="content-foo">
+                <h4>Email</h4>
+
+                <p>patricio.hernandez@profesores.duoc.cl</p>
+            </div>
+            <div class="content-foo">
+                <h4>Location</h4>
+                <p>01001000 </p>
+                <p>01101111 </p>
+                <p>01101100 </p>
+                <p>01100001 </p>
+                <p>00100000 </p>
+                <p>01101101 01110101 01101110 01100100 01101111</p>
+            </div>
+        </div>
+        <h2 class="titulo-final">&copy; Saludos Profe Ale </h2>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/web-animations-js@2.3.2/web-animations.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/muuri@0.9.0/dist/muuri.min.js"></script>
+    <script src="{% static 'ProyectowebApp/js/Script.js' %}"></script>
+</body>
+
+</html>

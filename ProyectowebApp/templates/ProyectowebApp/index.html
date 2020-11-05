@@ -1,0 +1,372 @@
+{% extends "ProyectowebApp/base.html" %}
+{% load static %}
+
+{% block content %}
+<!-- pj-->
+    <main>
+        <section class="contenedorPr">
+            <div class="logo">
+                <h2 class="titulo">Agentes</h2>
+            </div>
+            <div class="contenedor-sobre-valorant">
+                <img src="{% static 'ProyectowebApp/img/agentes.png' %}" alt="" class="imagen-about-us">
+                <!--??? SE PUEDE MODIFCAR EN CSS QUE SE ENCUENTRA SU CLASE ???-->
+                <div class="contenido-textos">
+                    <h3><span>1</span>Que son los Agentes?</h3>
+                    <p>Los agentes son los personajes jugables en Valorant. Cada agente sirve como una clase diferente con cuatro habilidades y un contrato único.</p>
+                    <h3><span>2</span>Los mejores personajes Valorant</h3>
+                    <p> </p>
+                    <p>Tier S: Cypher - Omen</p>
+                    <p>Tier A: Killjoy - Sova - Jett - brimstone - Raze Breach</p>
+                    <p>Tier B: Sage Pheonix</p>
+                    <p>Tier C: Reyna Viper</p>
+                </div>
+            </div>
+        </section>
+        <section>
+            <div class="contenedorP">
+                <div class="HeaderPirata">
+                    <div class="logo">
+                        <h2 class="titulo">Todos los agentes</h2>
+                    </div>
+
+                    <form action="" class="form">
+                        <input type="text" class="barra-busqueda" id="barra-busqueda" placeholder="Buscar">
+                    </form>
+                    <div class="categorias" id="categorias">
+                        <a href="#" class="activo">Todos</a>
+                        <a href="#">Centinela</a>
+                        <a href="#">Duelista</a>
+                        <a href="#">Controlador</a>
+                        <a href="#">Iniciador</a>
+                    </div>
+                </div>
+                <section class="grid" id="grid">
+                    <div class="item" 
+                         data-categoria="duelista"
+                         data-etiquetas="duelista reyna Reyna mujer mujeres"
+                         data-descripcion="Reyna: es una duelista con una capacidad ofensiva muy considerable, 
+                         capaz de aprovecharse de los orbes que producen sus enemigos muertos
+                         para recuperar vida, volverse intangible o incluso invisible al combinar sus 
+                         habilidades con cabeza."
+                    >
+                        <div class="item-contenido">
+                            <img src="{% static 'ProyectowebApp/img/agente_1.png' %}" alt="">
+                            <h2 class="nombreAgente">Reyna</h2>
+                        </div>
+                    </div>
+        
+                    <div class="item"
+                         data-categoria="duelista"
+                         data-etiquetas="duelista raze Raze mujer mujeres"
+                         data-descripcion="Raze es otra duelista que, como tal, funciona especialmente en la línea más ofensiva de las rondas.
+                         Úsala cuando quieras abrir paso a tu equipo y atacar fuertemente sin descanso ni piedad para tus enemigos."
+                    >
+                        <div class="item-contenido">
+                            <img src="{% static 'ProyectowebApp/img/agente_2.png' %}" alt="">
+                            <h2 class="nombreAgente">Raze</h2>
+                        </div>
+                    </div>
+        
+                    <div class="item"
+                         data-categoria="duelista"
+                         data-etiquetas="duelista jett Jett mujer mujeres"
+                         data-descripcion="Jett es una duelista muy versátil que encantará
+                          a los jugadores que buscan velocidad de movimiento y evasión dentro de Valorant."
+                    >
+                        <div class="item-contenido">
+                            <img src="{% static 'ProyectowebApp/img/agente_3.png' %}" alt="">
+                            <h2 class="nombreAgente">Jett</h2>
+                        </div>
+                    </div>
+        
+                    <div class="item"
+                         data-categoria="iniciador"
+                         data-etiquetas="iniciador breach Breach hombres hombre"
+                         data-descripcion="Breach: Es un buen personaje si lo que buscas es defender a tus compañeros
+                          y preparar el terreno para dar la bienvenida al equipo enemigo. Cuanto más conozcas los mapas y 
+                          más entiendas sus habilidades, mejor te desenvolverás con este agente.."
+                    >
+                        <div class="item-contenido">
+                            <img src="{% static 'ProyectowebApp/img/agente_4.png' %}" alt="">
+                            <h2 class="nombreAgente">Breach</h2>
+                        </div>
+                    </div>
+        
+                    <div class="item"
+                         data-categoria="controlador"
+                         data-etiquetas="controlador omen Omen hombres hombre"
+                         data-descripcion="Omen: es una especie de cazador de las sombras que puede ser muy escurridizo en manos hábiles.
+                          Especialmente útil si se trabaja en equipo, y un personaje bastante ofensivo con el que hay que tener mucho cuidado
+                          si se encuentra en el campo de batalla ya que, por ejemplo, te puede aparecer por sorpresa en la espalda y habrás muerto
+                          antes de que te haya dado tiempo a reaccionar."
+                    >
+                        <div class="item-contenido">
+                            <img src="{% static 'ProyectowebApp/img/agente_5.png' %}" alt="">
+                            <h2 class="nombreAgente">Omen</h2>
+                        </div>
+                    </div>
+        
+                    <div class="item"
+                         data-categoria="controlador"
+                         data-etiquetas="controlador Brimstone brimstone hombres hombre"
+                         data-descripcion="Brimstone: funciona un poco como el clásico personaje soldado, 
+                         típico de muchos shooters online. Sus habilidades directas y sencillas de comprender y usar 
+                         le confieren un equilibrio genial para casi cualquier situación y puede que por esto mismo sea el 
+                         agente más accesible con el que jugar al principio. Así que es una elección fenomenal para los jugadores novatos y principiantes 
+                         que quieran acomodarse a las mecánicas de Valorant."
+                    >
+                        <div class="item-contenido">
+                            <img src="{% static 'ProyectowebApp/img/agente_6.png' %}" alt="">
+                            <h2 class="nombreAgente">Brimstone</h2>
+                        </div>
+                    </div>
+        
+                    <div class="item"
+                         data-categoria="duelista"
+                         data-etiquetas="duelista phoenix Phoenix hombres hombre"
+                         data-descripcion="Phoenix: es un duelista muy hábil con unas habilidades
+                         que lo hacen interesante de cara a la ofensiva. Ideal para los jugadores 
+                         que quieren ir directos a los tiroteos y conseguirse muchas bajas."
+                    >
+                        <div class="item-contenido">
+                            <img src="{% static 'ProyectowebApp/img/agente_7.png' %}" alt="">
+                            <h2 class="nombreAgente">Phoenix</h2>
+                        </div>
+                    </div>
+        
+                    <div class="item" 
+                         data-categoria="centinela"
+                         data-etiquetas="centinela Sage sage mujeres mujer"
+                         data-descripcion="Sage: es el personaje sanador o médico de Valorant.
+                          Sus habilidades están centradas en la defensa y la curación tanto propia
+                          como de compañeros de equipo, e incluso en la reanimación de los caídos, 
+                          algo que puede cambiar el curso de cualquier ronda que parezca perdida."
+                    >
+                        <div class="item-contenido">
+                            <img src="{% static 'ProyectowebApp/img/agente_8.png' %}" alt="">
+                            <h2 class="nombreAgente">Sage</h2>
+                        </div>
+                    </div>
+        
+                    <div class="item"
+                         data-categoria="iniciador"
+                         data-etiquetas="iniciador Sova sova hombres hombre"
+                         data-descripcion="Sova es un personaje ideado para los jugadores más rastreadores.
+                         Gracias a sus habilidades y su arco podrás ir siempre un paso por delante de tus 
+                         enemigos, ya que puedes hacer volar un dron para buscar y marcar oponentes, por ejemplo, o disparar
+                         una flecha que emite un pulso durante unos instantes y que resalta el contorno de
+                         los enemigos cercanos incluso cuando estos están detrás de las paredes.
+                             "
+                    >
+                        <div class="item-contenido">
+                            <img src="{% static 'ProyectowebApp/img/agente_9.png' %}" alt="">
+                            <h2 class="nombreAgente">Sova</h2>
+                        </div>
+                    </div>
+
+                    <div class="item"
+                         data-categoria="controlador"
+                         data-etiquetas="controlador viper Viper mujeres mujer venenosa"
+                         data-descripcion="Viper: es una agente centrada en aspectos tóxicos y venenosos 
+                         que puede hacer mucho daño si eres diestro con ella. En especial gustará a los jugadores 
+                         que quieran ir más a sus anchas sin depender tanto del juego en equipo, aunque bien usada 
+                         puede apoyar bastante a los compañeros.
+                             "
+                    >
+                        <div class="item-contenido">
+                            <img src="{% static 'ProyectowebApp/img/agente_10.png' %}" alt="">
+                            <h2 class="nombreAgente">Viper</h2>
+                        </div>
+                    </div>
+
+                    <div class="item"
+                         data-categoria="centinela"
+                         data-etiquetas="centinela Cypher cypher hombres hombre"
+                         data-descripcion="Cypher: como buen centinela, es capaz de adelantarse a los movimientos
+                         de los enemigos y cubrir posiciones. Sus habilidades están destinadas a la defensa, así que 
+                         te recomendamos que lo uses si lo tuyo no es estar al pie del cañón y en el frente de línea. 
+                         Más bien hay que usarlo creando estrategias con nuestros compañeros y acompañarlos en la batalla dándoles apoyo.
+                         Es un personaje que puede funcionar genial cuando se juega en el bando de los defensores y hay que mantener a salvo una zona de la SPIKE.
+                             "
+                    >
+                        <div class="item-contenido">
+                            <img src="{% static 'ProyectowebApp/img/agente_11.png' %}" alt="">
+                            <h2 class="nombreAgente">Cypher</h2>
+                        </div>
+                    </div>
+
+                    <div class="item"
+                         data-categoria="centinela"
+                         data-etiquetas="centinela Killjoy killjoy mujer mujeres "
+                         data-descripcion="Killjoy es una centinela y una genio que posee un arsenal de inventos
+                          entre los que se encuentran unos bots muy interesantes. Sus capacidades la hacen una muy
+                           buena opción de cara a asegurar el campo de batalla con facilidad.
+                             "
+                    >
+                        <div class="item-contenido">
+                            <img src="{% static 'ProyectowebApp/img/agente_12.png' %}" alt="">
+                            <h2 class="nombreAgente">Killjoy</h2>
+                        </div>
+                    </div>
+                </section>
+                
+                <section class="overlay" id="overlay">
+                    <div class="contenedor-img">
+                        <button id="btn-cerrar-popup"><i class="fas fa-times"></i></button>
+                        <img class="contenedor-dentro" src="" alt="">
+                    </div>
+                    <p class="descripcion"></p>
+                </section>
+            </div>
+        </section>
+        <!-- Armas!-->
+
+        <section>
+
+            
+            <div class="Video-valorant1">
+                <video class="Mover-video1" src="{% static 'ProyectowebApp/video/video2.mp4' %}" autoplay="" muted="" loop="">
+
+                </video>
+            </div>
+            <div class="contenedor-armas-inicio">
+                
+                <h2 class="titulo1">Armas</h2>
+                                            
+                    <div class="contenedor-img1">
+                        
+                          
+                        <img  src="{% static 'ProyectowebApp/img/armas/classic.png' %}">
+
+                        <a href="arsenal">
+                        <div class="content-txt">
+
+                            <p>Accede al contenido de armas y podrás ver mas información</p>
+                            <h2>Ver Más</h2>
+                        </div>
+                        </a>
+                       
+
+
+                       
+                        <div class="content-1"> </div>
+                        <div class="content-2"> </div>
+                        <div class="content-3"> </div>
+                        <div class="content-4"> </div>
+                   
+                    
+                    </div>
+                
+
+
+            </div>
+            
+        </section>
+
+       <!--MAPAS-->
+
+       <section class="HeaderPirata">
+           <div class="HeaderPirata">
+            <div class="contenedorM">
+                <div class="logo">
+                    <h2 class="titulo">MAPAS</h2>
+                </div>
+    
+                <div class="containerM">
+                    <div class="card">
+                        <img src="https://images.contentstack.io/v3/assets/bltb6530b271fddd0b1/blt8538036a309525ae/5ebc470bfd85ad7411ce6b50/bind-featured.png" alt="">
+                        <h4>Bind</h4>
+                        <p>Dos sitios. No existe un centro. Debes elegir derecha o izquierda. ¿Cuál será tu elección? Ambos ofrecen caminos directos para los atacantes y un par de teletransportadores unidireccionales facilitan el flanqueo.</p>
+                        <a href="#" class="cta1">Ver mas</a>
+                    </div>
+      
+                    <div class="card">
+                         <img src="https://images.contentstack.io/v3/assets/bltb6530b271fddd0b1/blt8afb5b8145f5e9b2/5ebc46f7b8c49976b71c0bc5/haven-featured.png" alt="">
+                         <h4>haven</h4>
+                         <p>Bajo un monasterio olvidado, emerge un clamor entre los agentes rivales que se enfrentan para controlar tres sitios. Hay más territorio por controlar, pero los defensores pueden usar el terreno adicional para realizar ataques agresivos</p>
+                         <a href="#" class="cta2">Ver mas</a>
+                    </div>
+      
+                    <div class="card">
+                         <img src="https://images.contentstack.io/v3/assets/bltb6530b271fddd0b1/bltd188c023f88f7d91/5ebc46db20f7727335261fcd/split-featured.png" alt="">
+                         <h4>split</h4>
+                         <p>Si quieres ir lejos, debes subir. Un par de sitios divididos por un centro elevado permite un movimiento rápido por medio de dos ascensores de cuerda. Cada sitio cuenta con una gran torre vital para el control. Recuerda mirar arriba antes de que todo vuele por los aires.</p>
+                         <a href="#" class="cta3">Ver mas</a>
+                    </div>
+      
+                    <div class="card">
+                         <img src="https://images.contentstack.io/v3/assets/bltb6530b271fddd0b1/blta9b912e1a1b59aa4/5ebc471cfa550001f72bcb13/ascent-featured.png" alt="">
+                         <h4>ascent</h4>
+                         <p>Un campo abierto para pequeñas batallas de posicionamiento y desgaste dividen Ascenso en dos sitios. Puedes fortificar cada uno con puertas de bombas irreversibles; una vez puestas, tendrás que destruirlas o encontrar otra forma de pasar. Cede el menor territorio posible</p>
+                         <a href="#" class="cta4">Ver mas</a>
+                    </div>
+                </div>
+            </div>
+           </div>
+
+
+      </section>
+
+      <div class="modal-container">
+        <div class="modal modal-close">
+             <p class="close">X</p>
+             <img src="{% static 'ProyectowebApp/img/bind2.png' %}" alt="">
+             <div class="modal-textos">
+                 <h2>Sectores de Bind</h2>
+             </div>
+        </div>
+    </div>
+
+    <div class="modal-container-haven">
+        <div class="modal1 modal-closeH">
+             <p class="closeH">X</p>
+             <img src="{% static 'ProyectowebApp/img/Haven.png' %}" alt="">
+             <div class="modal-textosH">
+                 <h2>Sectores de haven</h2>
+             </div>
+        </div>
+    </div>
+
+    <div class="modal-container-split">
+        <div class="modal2 modal-closeS">
+             <p class="closeS">X</p>
+             <img src="{% static 'ProyectowebApp/img/split.png' %}" alt="">
+             <div class="modal-textosS">
+                 <h2>Sectores de split</h2>
+             </div>
+        </div>
+    </div>
+
+    <div class="modal-container-ascent">
+        <div class="modal3 modal-closeA">
+             <p class="closeA">X</p>
+             <img src="{% static 'ProyectowebApp/img/ascent.png' %}" alt="">
+             <div class="modal-textosA">
+                 <h2>Sectores de ascent</h2>
+             </div>
+        </div>
+    </div>
+        <div class="Video-valorant">
+            <div class="contenedorP">
+                <div class="Video-valorant">
+                    <video class="Mover-video" src="{% static 'ProyectowebApp/video/video3.mp4' %}" autoplay="" muted="" loop="">
+    
+                    </video>
+                </div>
+                
+                <div class="Texto-centrado">
+                        <h1>Descarga ahora</h1>
+                </div>
+                
+                <div class="imagen-descarga">
+                    <a href="https://valorant.secure.dyn.riotcdn.net/channels/public/x/installer/current/live.live.eu.exe">
+                        <img class="imagen-descarga-reducida" src="{% static 'ProyectowebApp/img/ICONO_VALORANT.jpg' %}" alt="">
+                    </a>
+                </div>
+            </div>
+
+
+        </div>
+
+        {% endblock %}

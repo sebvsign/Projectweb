@@ -1,0 +1,57 @@
+{% extends "ProyectowebApp/base.html" %}
+{% load static %}
+
+{% block content %}
+
+
+<section class="contenedor sobre-valorant">
+    <h2 class="titulo">Feedback</h2>
+    <div class="contenedor-sobre-valorant">
+        <img src="{% static 'ProyectowebApp/img/agentes.png' %}" alt="" class="imagen-about-us">
+        <!--??? SE PUEDE MODIFCAR EN CSS QUE SE ENCUENTRA SU CLASE ???-->
+        <div class="contenido-textos">
+            <!-- Se HACE FORMULARIO -->
+            <form action="" class="formulario" name = "formulario_registro" method="post" id="formulario">
+                <div class="form-register">
+                    <h4>Formulario Comentario</h4>
+
+                    <input class="controls" type="text" id="nickname" name="NickName" placeholder="NickName">
+                    <input class="controls" type="email" id="email" name="email" placeholder="Correo">
+                    <input class="controls" type="text" name="asunto" placeholder="Asunto" id="asunto">
+                    <textarea class="controls" id="comentarios" rows="10" cols="40" placeholder="Escribe aqui tus comentarios"></textarea>
+                    
+                    <input type="checkbox" name="micheckbox" id="terminos" value="true">
+                    <p>Estoy de acuerdo con <a href="#" class="cta1">Terminos y Condiciones</p>
+                    <button class="botons" type="button" onclick ="validarFormulario()">Enviar</button>
+                    <!--<input class="botons" type="submit" id="btn-submit" value="Enviar"> -->
+                    <div id = "info"> </div>
+                    
+
+                    <div class="modal-container">
+                        
+                        
+                        <div class="modal modal-close">
+                                
+                            <p class="close">X</p>
+                            <div class="modal-textos">
+                                <h2 class="titulo1">Terminos y condiciones</h2>
+                                <h1>1.-</h1>
+
+                                <h1>2.-</h1>
+
+                                <h1>3.-</h1>
+                             </div>
+                        </div>
+
+                    </div>
+
+                    
+                </div>    
+            </form>
+
+        </div>
+    </div>
+</section> 
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="{% static 'ProyectowebApp/js/Formulario.js' %}"></script>
+{% endblock%}
