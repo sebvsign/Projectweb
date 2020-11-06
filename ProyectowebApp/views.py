@@ -18,6 +18,6 @@ def blog(request):
 
     return render(request, "ProyectowebApp/formulario.html")
 
-def contacto(request):
+def login(request):
 
     return render(request, "ProyectowebApp/login.html")
