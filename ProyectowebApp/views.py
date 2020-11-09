@@ -1,23 +1,20 @@
 from django.shortcuts import render, HttpResponse
 
 # Create your views here.
+#Profe aca hicimos una prueba de merge con errores (adrer)
 
-def home(request):
+def index(request):
 
     return render(request, "ProyectowebApp/index.html")
 
-def servicios(request):
+def arsenal(request):
 
     return render(request, "ProyectowebApp/arsenal.html")
 
-def tienda(request):
+def acerca(request):
 
     return render(request, "ProyectowebApp/acerca.html")
 
-def blog(request):
+def formulario(request):
 
     return render(request, "ProyectowebApp/formulario.html")
-
-def login(request):
-
-    return render(request, "ProyectowebApp/login.html")

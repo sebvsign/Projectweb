@@ -3,9 +3,8 @@ from django.urls import path
 from ProyectowebApp import views
 
 urlpatterns = [
-    path('index', views.home, name="Index"),
-    path('arsenal', views.servicios, name="Arsenal"),
-    path('acerca', views.tienda, name="Acerca"),
-    path('formulario', views.blog, name="Formulario"),
-    path('login', views.login, name="Login"),
+    path('index', views.index, name="Index"),
+    path('arsenal', views.arsenal, name="Arsenal"),
+    path('acerca', views.acerca, name="Acerca"),
+    path('formulario', views.formulario, name="Formulario"),
 ]
