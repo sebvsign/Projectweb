@@ -9,3 +9,5 @@ class Usuario(models.Model):
 
     def __str__(self):
         return self.Nickname
+
+# reinicio de la prueba unitaria
