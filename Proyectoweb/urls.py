@@ -21,3 +21,4 @@ urlpatterns = [
     path('', include('ProyectowebApp.urls')),
     
 ]
+admin.site.site_header = "Administracion de Valorant"
