@@ -7,4 +7,5 @@ urlpatterns = [
     path('arsenal', views.arsenal, name="Arsenal"),
     path('acerca', views.acerca, name="Acerca"),
     path('formulario', views.formulario, name="Formulario"),
+
 ]
