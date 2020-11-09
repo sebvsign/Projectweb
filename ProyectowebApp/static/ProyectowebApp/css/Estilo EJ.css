@@ -76,6 +76,7 @@ body {
     margin-bottom: 60px;
 }
 
+
 .contenedor-descarga {
     padding: 60px 0;
     width: 90%;
@@ -268,12 +269,13 @@ footer{
 table{
     text-align: center;
     position: relative;
+    background: #f2f2f2;
     top:40%;
     left: 45%;
-    background: rgb(145, 24, 24);
     font-size: x-large;
 
 }
+
 th, td{
     border: solid 1px black
 }
@@ -308,6 +310,9 @@ caption{
         position: absolute;
 
     }
+}
+.tablecito{
+    background: rgb(145, 144, 144);
 }
 /* video */
 

@@ -18,3 +18,7 @@ def acerca(request):
 def formulario(request):
 
     return render(request, "ProyectowebApp/formulario.html")
+
+def equipos(request):
+
+    return render(request, "ProyectowebApp/equipos.html")
