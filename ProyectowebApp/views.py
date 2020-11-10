@@ -1,4 +1,5 @@
 from django.shortcuts import render, HttpResponse
+from equipos.models import Equipo
 
 # Create your views here.
 #Profe aca hicimos una prueba de merge con errores (adrer)
@@ -20,5 +21,6 @@ def formulario(request):
     return render(request, "ProyectowebApp/formulario.html")
 
 def equipos(request):
-
-    return render(request, "ProyectowebApp/equipos.html")
+    #importamos todos los objetos que esten en equipo
+    equipos= Equipo.objects.all()
+    return render(request, "ProyectowebApp/equipos.html", {"equipos": equipos})
