@@ -12,14 +12,15 @@
         </div>
         <section class="grid" id="grid">
             <div class="item">    
-    {% for equipo in equipos %}
+    {% for p in teams %}
     
                 <div class="item-contenido">
-                    <p><img src="{{equipo.imagen.url}}" alt=""></p>
+                    <p><img src="{{p.logo.url}}" alt=""></p>
                     <div class="logo">
-                        <h2 class="nombreAgente" >{{equipo.titulo}}</h2>
+                        <h2 class="nombreAgente" >{{p.nombre}}</h2>
                     </div>
-                    <p class="textos">{{equipo.contenido}}</p>
+                    <p class="textos">{{p.etiqueta}}</p>
+                    <p class="textos">{{p.region}}</p>
                     <!--<h2 class="titulo">{{equipo.contenido}}</h2>-->
                 </div>
     {% endfor %}

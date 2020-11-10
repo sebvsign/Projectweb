@@ -1,0 +1,31 @@
+{% extends "ProyectowebApp/base.html" %}
+
+{% block content %}
+
+<h2>Listado de equipos</h2>
+
+<table>
+    <tr>
+        <th>Nombre</th>
+        <th>Etiqueta</th>
+        <th>logo</th>
+        <th>region</th>
+    </tr>
+
+    {% for p in teams %}
+    <tr>
+        <td>{{ p.nombre }}</td>
+        <td>{{ p.etiqueta }}</td>
+        <td>{{ p.logo }}</td>
+        <td>{{ p.region }}</td>
+    </tr>
+
+
+
+    {% endfor %}
+
+
+</table>
+
+
+{% endblock %}
