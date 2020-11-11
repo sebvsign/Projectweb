@@ -19,6 +19,7 @@ from django.urls import path, include
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('ProyectowebApp.urls')),
+    path('accounts/', include('django.contrib.auth.urls')),
     
 ]
 admin.site.site_header = "Administracion de Valorant"

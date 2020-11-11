@@ -2,6 +2,7 @@ from django.shortcuts import render, HttpResponse
 from equipos.models import Equipo
 from .models import Teams
 from .forms import TeamsForm, EquipoForm
+from django.contrib.auth.decorators import login_required
 
 # Create your views here.
 #Profe aca hicimos una prueba de merge con errores (adrer)
@@ -36,7 +37,7 @@ def listado_equipos(request):
 
 
 
-
+@login_required
 def nuevo_team(request):
     data = {
         'form':EquipoForm()

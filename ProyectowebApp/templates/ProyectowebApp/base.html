@@ -28,10 +28,15 @@
     <header>
         <!--??? NAV PARA REFERENCIAS COSTADO SUPERIOR DERECHO ???-->
         <nav>
-            <a href="index">Inicio</a>
-            <a href="acerca">Acerca de Valorant</a>
-            <a href="formulario">Formulario</a>
-            <a href="equipos">Equipos</a>
+            <a href="{% url 'Index' %}">Inicio</a>
+            <a href="{% url 'Acerca' %}">Acerca de Valorant</a>
+            <a href="{% url 'Formulario' %}">Formulario</a>
+            <a href="{% url 'Equipos' %}">Equipos</a>
+            {% if user.is_authenticated %}
+                <a href="#">Usuario: {{ user.username }}</a>
+
+                <a href="{% url 'logout' %}">Cerrar sesión</a>
+            {% endif %}
         </nav>
         
         <section class="textos-header">
