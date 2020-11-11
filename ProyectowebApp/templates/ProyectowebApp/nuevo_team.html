@@ -1,23 +1,30 @@
 {% extends "ProyectowebApp/base.html" %}
-
+{% load static %}
 
 {% block content %}
+<div class="HeaderPirata">
+    <div class="logo">
+        <h2 class="titulo">Nuevo Team</h2>
+    </div>
+</div>
 
-<h2>Nuevo Team</h2>
 
-<form action="" method="POST" enctype="multipart/form-data">
-    {% csrf_token %}
-    <table>
-        {{form.as_table}}
-    </table>
 
-    <input type="reset" value="limpiar" >
-    <input type="submit" value="guardar">
-    
+    <div class="contenido-textos">
+        <form action="" method="POST" enctype="multipart/form-data" class="formulario">
+            {% csrf_token %}
+            <table class="table-container">
+                {{form.as_table}}
+            </table>
+            <div class="div1">
+                <input type="reset" class="xbox" value="limpiar" ></input>
+                <input type="submit" class="xbox" value="guardar"></input>
+            </div>            
+    </div>
     
 
 </form>
 
 {{ mensaje }}
-
+<script src="{% static 'ProyectowebApp/js/NocAcerca.js'%}"></script>
 {% endblock %}

@@ -1,39 +1,45 @@
 {% extends "ProyectowebApp/base.html" %}
 
+{% load static %}
 {% block content %}
 <section>
     
 </section>
-<h2>Listado de equipos</h2>
-
-
-<div class="table-container">
-    <table>
-        <tr>
-            <th>Nombre Equipo</th>
-            <th>Etiqueta</th>
-            <th>logo</th>
-            
-            <th>Opciones</th>
-        </tr>
-    
-        {% for equipo in equipos %}
-        <tr>
-            <td>{{ equipo.titulo }}</td>
-            <td>{{ equipo.contenido }}</td>
-            <td>{{ equipo.imagen }}</td>
-            
-            <td><a href="{%url 'Equipo_Modificar' equipo.id %}">Modificar</a>
-                <a href="{%url 'Equipo_Eliminar' equipo.id %}">Eliminar</a>
-            </td>
-        </tr>
-    
-    
-    
-        {% endfor %}
-    
-    
-    </table>
+<div class="HeaderPirata">
+    <div class="logo">
+        <h2 class="titulo">Listado de equipos</h2>
+    </div>
 </div>
 
+
+<div class="contenido-textos">
+        <table class="table-container">
+            <tr>
+                <th>Nombre Equipo</th>
+                <th>Etiqueta</th>
+                <th>logo</th>
+                
+                <th>Opciones</th>
+            </tr>
+        
+            {% for equipo in equipos %}
+            <tr>
+                <td>{{ equipo.titulo }}</td>
+                <td>{{ equipo.contenido }}</td>
+                <td>{{ equipo.imagen }}</td>
+                
+                <td><a href="{%url 'Equipo_Modificar' equipo.id %}">Modificar</a>
+                    <a href="{%url 'Equipo_Eliminar' equipo.id %}">Eliminar</a>
+                </td>
+            </tr>
+        
+        
+        
+            {% endfor %}
+        
+        
+        </table>
+</div>
+
+<script src="{% static 'ProyectowebApp/js/NocAcerca.js'%}"></script>
 {% endblock %}

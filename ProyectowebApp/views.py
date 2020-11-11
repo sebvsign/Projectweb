@@ -1,4 +1,5 @@
 from django.shortcuts import redirect, render, HttpResponse
+from django.shortcuts import render, HttpResponse, redirect
 from equipos.models import Equipo
 from .models import Teams
 from .forms import TeamsForm, EquipoForm

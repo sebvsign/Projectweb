@@ -173,6 +173,23 @@ header .textos-header{
     color: white;
 }
 
+.xbox {
+    widows: 100%;
+    background: #24303c;
+    padding: 10px;
+    border-radius: 4px;
+    margin-bottom: 16px;
+    border: 1px solid #1f53c5;
+    font-family: 'calibri';
+    font-size: 18px;
+    color: white;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.div1{
+    text-align: center;
+}
 /* Formulario */
 
 .alert{
