@@ -15,7 +15,7 @@
     <!--??? LINK PARA CONECTAR CSS ???-->
     <link rel="stylesheet" href="{% static 'ProyectowebApp/css/estilos.css' %}">
     <link rel="stylesheet" href="{% static 'ProyectowebApp/css/styleForm.css' %}">
-    
+    <link rel="stylesheet" href="{% static 'ProyectowebApp/css/galeria.css' %}">
     <link rel="stylesheet" href="{% static 'ProyectowebApp/css/Estilo EJ.css' %}">
         
 
@@ -32,6 +32,8 @@
             <a href="{% url 'Acerca' %}">Acerca de Valorant</a>
             <a href="{% url 'Formulario' %}">Formulario</a>
             <a href="{% url 'Equipos' %}">Equipos</a>
+            <a href="{% url 'Nuevo_team' %}">Agregar equipos</a>
+            <a href="{% url 'Listado_equipos' %}">Listado de equipos, Modificar y Eliminar</a>
             {% if user.is_authenticated %}
                 <a href="#">Usuario: {{ user.username }}</a>
 

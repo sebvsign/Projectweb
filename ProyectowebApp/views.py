@@ -1,4 +1,4 @@
-from django.shortcuts import render, HttpResponse
+from django.shortcuts import redirect, render, HttpResponse
 from equipos.models import Equipo
 from .models import Teams
 from .forms import TeamsForm, EquipoForm
@@ -28,6 +28,7 @@ def equipos(request):
     equipos= Equipo.objects.all()
     return render(request, "ProyectowebApp/equipos.html", {"equipos": equipos})
 
+@login_required
 def listado_equipos(request):
     equipos = Equipo.objects.all()
     data = {
@@ -51,6 +52,7 @@ def nuevo_team(request):
 
     return render(request,"ProyectowebApp/nuevo_team.html", data )
 
+@login_required
 def equipos_modificar(request, id):
     equipos = Equipo.objects.get(id=id)
     data = {
@@ -67,3 +69,9 @@ def equipos_modificar(request, id):
 
 
     return render(request,'ProyectowebApp/equipos_modificar.html',data)
+
+@login_required
+def equipos_eliminar(request, id):
+    equipos = Equipo.objects.get(id=id)
+    equipos.delete()
+    return redirect(to="Listado_equipos")

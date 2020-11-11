@@ -1,5 +1,3 @@
-alert("Bienvenido");
-
 //* GRUPO */
 
 const grid = new Muuri('.grid', {

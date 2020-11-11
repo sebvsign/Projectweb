@@ -6,31 +6,34 @@
 </section>
 <h2>Listado de equipos</h2>
 
-<table>
-    <tr>
-        <th>Nombre Equipo</th>
-        <th>Etiqueta</th>
-        <th>logo</th>
-        
-        <th>Opciones</th>
-    </tr>
 
-    {% for equipo in equipos %}
-    <tr>
-        <td>{{ equipo.titulo }}</td>
-        <td>{{ equipo.contenido }}</td>
-        <td>{{ equipo.imagen }}</td>
-        
-        <td><a href="{%url 'Equipo_Modificar' equipo.id %}">Modificar</a>
-        </td>
-    </tr>
-
-
-
-    {% endfor %}
-
-
-</table>
-
+<div class="table-container">
+    <table>
+        <tr>
+            <th>Nombre Equipo</th>
+            <th>Etiqueta</th>
+            <th>logo</th>
+            
+            <th>Opciones</th>
+        </tr>
+    
+        {% for equipo in equipos %}
+        <tr>
+            <td>{{ equipo.titulo }}</td>
+            <td>{{ equipo.contenido }}</td>
+            <td>{{ equipo.imagen }}</td>
+            
+            <td><a href="{%url 'Equipo_Modificar' equipo.id %}">Modificar</a>
+                <a href="{%url 'Equipo_Eliminar' equipo.id %}">Eliminar</a>
+            </td>
+        </tr>
+    
+    
+    
+        {% endfor %}
+    
+    
+    </table>
+</div>
 
 {% endblock %}
