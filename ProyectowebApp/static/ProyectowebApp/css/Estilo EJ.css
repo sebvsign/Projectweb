@@ -69,6 +69,13 @@ body {
     overflow: hidden;
 }
 
+.titulo {
+    color: #642a73;
+    font-size: 30px;
+    text-align: center;
+    margin-bottom: 60px;
+}
+
 
 .contenedor-descarga {
     padding: 60px 0;
@@ -85,7 +92,7 @@ body {
 header {
     width: 100%;
     height: 600px;
-    background: #FAE6E1;
+    background:auto;
     /* fallback for old browsers */
     background: url(../img/portada.jpg);
     /* Chrome 10-25, Safari 5.1-6 */
@@ -122,15 +129,15 @@ header .textos-header{
     text-align: center;
 }
 
-.textos-header h1{
+.textos h1{
     font-size: 50px;
-    color:#fff;
+    color:auto;
 }
 
-.textos-header h2{
+.textos h2{
     font-size: 30px;
     font-weight: 300;
-    color:#fff;
+    color: auto;
 }
 
 .wave{
@@ -159,7 +166,7 @@ main .acerca-valorant{
 
 .contenido-textos h3 span{
     background: #FF0000;
-    color: #000000;
+    color: auto;
     border-radius: 50%;
     display: inline-block;
     text-align: center;
@@ -169,8 +176,8 @@ main .acerca-valorant{
     box-shadow: 0 0 6px 0 rgba(0, 0, 0, .5);
     margin-right: 5px;
     }
-.imagen-about-us{
-        width: 40%;
+.imagen{
+        width: 50%;
     }
     
 @media screen and (max-width:900px){
@@ -262,15 +269,17 @@ footer{
 table{
     text-align: center;
     position: relative;
-    background: #f2f2f2;
+    background: #fa5a5a;
     top:40%;
     left: 45%;
     font-size: x-large;
+    
 
 }
 
 th, td{
-    border: solid 1px black
+    border: solid 1px ;
+    color: auto;
 }
 
 caption{
@@ -296,7 +305,6 @@ caption{
     margin-bottom: 60px;
     margin-top: 90px;
 }
-
 
 @media screen and (max-width: 500px) {
     .requisitos-valorant{
@@ -365,3 +373,4 @@ caption{
     margin: auto;
     display: block;
 }
+

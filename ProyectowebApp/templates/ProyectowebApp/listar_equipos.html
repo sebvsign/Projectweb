@@ -1,5 +1,6 @@
 {% extends "ProyectowebApp/base.html" %}
 
+
 {% block content %}
 
 <h2>Listado de equipos</h2>
@@ -20,6 +21,7 @@
         <td>{{ equipo.imagen }}</td>
         
         <td><a href="{%url 'Equipo_Modificar' equipo.id %}">Modificar</a>
+            <a href="{%url 'Equipo_Eliminar' equipo.id %}">Eliminar</a>
         </td>
     </tr>
 

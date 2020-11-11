@@ -1,4 +1,4 @@
-from django.shortcuts import render, HttpResponse
+from django.shortcuts import render, HttpResponse, redirect
 from equipos.models import Equipo
 from .models import Teams
 from .forms import TeamsForm, EquipoForm
@@ -66,3 +66,8 @@ def equipos_modificar(request, id):
 
 
     return render(request,'ProyectowebApp/equipos_modificar.html',data)
+
+def equipos_eliminar(request, id):
+    equipos = Equipo.objects.get(id=id)
+    equipos.delete()
+    return redirect(to="Listado_equipos")
