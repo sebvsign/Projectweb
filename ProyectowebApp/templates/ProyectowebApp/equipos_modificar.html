@@ -4,10 +4,24 @@
 {% block content %}
 <!--bucle foreach para proximos equipos que se integren y lo lea-->
 <section>
-    <div class="contenedor"><h1>Seccion Teams</h1>
-        <ul>
-            <h3><a href="">Modificar teams</a></h3>
-        </ul>
+    <div class="contenedor">Seccion Teams 
+        
+            <h1>Modificar teams</h1>
+       
+        <form action="" method="POST" enctype="multipart/form-data">
+            {% csrf_token %}
+            <table>
+                {{form.as_table}}
+            </table>
+        
+            <input type="reset" value="limpiar" >
+            <input type="submit" value="modificar">
+            
+            
+        
+        </form>
+        
+        {{ mensaje }}
 
 
     </div>
@@ -27,6 +41,7 @@
                         <h2 class="nombreAgente" >{{equipo.titulo}}</h2>
                     </div>
                     <p class="textos">{{equipo.contenido}}</p>
+                    
                     <!--<h2 class="titulo">{{equipo.contenido}}</h2>-->
                 </div>
     {% endfor %}

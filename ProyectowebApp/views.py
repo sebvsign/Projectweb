@@ -1,7 +1,7 @@
 from django.shortcuts import render, HttpResponse
 from equipos.models import Equipo
 from .models import Teams
-from .forms import TeamsForm
+from .forms import TeamsForm, EquipoForm
 
 # Create your views here.
 #Profe aca hicimos una prueba de merge con errores (adrer)
@@ -28,9 +28,9 @@ def equipos(request):
     return render(request, "ProyectowebApp/equipos.html", {"equipos": equipos})
 
 def listado_equipos(request):
-    teams = Teams.objects.all()
+    equipos = Equipo.objects.all()
     data = {
-        'teams':teams
+        'equipos':equipos
     }
     return render(request,"ProyectowebApp/listar_equipos.html", data)
 
@@ -39,13 +39,30 @@ def listado_equipos(request):
 
 def nuevo_team(request):
     data = {
-        'form':TeamsForm()
+        'form':EquipoForm()
     }
 
     if request.method == 'POST':
-        formulario = TeamsForm(request.POST, files=request.FILES)
+        formulario = EquipoForm(request.POST, files=request.FILES)
         if formulario.is_valid():
             formulario.save()
             data['mensaje'] = "Guardado correctamente"
 
     return render(request,"ProyectowebApp/nuevo_team.html", data )
+
+def equipos_modificar(request, id):
+    equipos = Equipo.objects.get(id=id)
+    data = {
+        'form':EquipoForm(instance=equipos)
+
+
+    }
+    if request.method =='POST':
+        formulario = EquipoForm(data=request.POST, instance=equipos)
+        if formulario.is_valid():
+         formulario.save()
+        data['mensaje'] = "Modificado correctamente"
+        data['form'] = formulario
+
+
+    return render(request,'ProyectowebApp/equipos_modificar.html',data)
