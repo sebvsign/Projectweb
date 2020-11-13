@@ -38,7 +38,14 @@
                 <a href="#">Usuario: {{ user.username }}</a>
 
                 <a href="{% url 'logout' %}">Cerrar sesión</a>
+            {% else %}
+
+                <a href="{% url 'login' %}">Inicio de sesion</a>
+                <a href="{% url 'registro_usuario' %}">Registrar</a>
+    
+             
             {% endif %}
+
         </nav>
         
         <section class="textos-header">
