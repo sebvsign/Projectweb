@@ -29,6 +29,8 @@ SECRET_KEY = '*@1$l_pyr(r&jujr(3j1m4jyshxzlfv24e_!^6u6k8la(1^m7p'
 DEBUG = True
 
 ALLOWED_HOSTS = []
+if DEBUG:
+    EMAIL_BACKEND = 'django.core.email.backends.smtp.EmailBackend'
 
 
 LOGIN_REDIRECT_URL = '/'
