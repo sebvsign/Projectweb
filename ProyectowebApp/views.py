@@ -9,11 +9,10 @@ from django.contrib.auth import login as auth_login
 from django.contrib.auth import logout as auth_logout
 from django.contrib.auth import update_session_auth_hash
 from django.contrib.auth.decorators import login_required, permission_required
-from django.http.response import HttpResponseRedirect
-from django.shortcuts import HttpResponse, redirect, render, resolve_url
+from django.shortcuts import  redirect, render, resolve_url
 from equipos.models import Equipo
-from .forms import CustomeUserForm, EquipoForm, TeamsForm
-from .models import Teams
+from .forms import CustomeUserForm, EquipoForm
+
 
 # Create your views here.
 #Profe aca hicimos una prueba de merge con errores (adrer)
@@ -39,7 +38,7 @@ def equipos(request):
     equipos= Equipo.objects.all()
     return render(request, "ProyectowebApp/equipos.html", {"equipos": equipos})
 
-@login_required
+@permission_required('equipos.view_equipo')
 def listado_equipos(request):
     equipos = Equipo.objects.all()
     data = {
@@ -63,7 +62,7 @@ def nuevo_team(request):
 
     return render(request,"ProyectowebApp/nuevo_team.html", data )
 
-@login_required
+@permission_required('equipos.change_equipo')
 def equipos_modificar(request, id):
     equipos = Equipo.objects.get(id=id)
     data = {
@@ -81,7 +80,7 @@ def equipos_modificar(request, id):
 
     return render(request,'ProyectowebApp/equipos_modificar.html',data)
 
-@login_required
+@permission_required('equipos.delete_equipo')
 def equipos_eliminar(request, id):
     equipos = Equipo.objects.get(id=id)
     equipos.delete()
