@@ -36,4 +36,4 @@ OK
 
 
 
-Para lo que es Admin en django en seccion VALORANT no considerar Teamss y Regioness debido a que es un proyecto a futuro que e va a mejorar o quitar, gracias :)
+Para lo que es Admin en django en seccion VALORANT no considerar Teamss y Regioness debido a que es un proyecto a futuro que se va a mejorar o quitar, gracias :)
