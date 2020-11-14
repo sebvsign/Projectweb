@@ -33,3 +33,7 @@ Ran 0 tests in 0.000s
 OK
 
 
+
+
+
+Para lo que es Admin en django en seccion VALORANT no considerar Teamss y Regioness debido a que es un proyecto a futuro que e va a mejorar o quitar, gracias :)
