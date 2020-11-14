@@ -1,36 +1,33 @@
-from django.shortcuts import redirect, render, HttpResponse
-from django.shortcuts import render, HttpResponse, redirect
-from equipos.models import Equipo
-from .models import Teams
-from .forms import TeamsForm, EquipoForm, CustomeUserForm
-from django.contrib.auth.decorators import login_required, permission_required
-from django.contrib.auth import login, authenticate
 from urllib.parse import urlparse, urlunparse
 
 from django.conf import settings
 # Avoid shadowing the login() and logout() views below.
-from django.contrib.auth import (
-    REDIRECT_FIELD_NAME, get_user_model, login as auth_login,
-    logout as auth_logout, update_session_auth_hash,
-)
-from django.contrib.auth.decorators import login_required
-from django.contrib.auth.forms import (
-    AuthenticationForm, PasswordChangeForm, PasswordResetForm, SetPasswordForm,
-)
+from django.contrib.auth import (REDIRECT_FIELD_NAME, authenticate,
+                                 get_user_model)
+from django.contrib.auth import login
+from django.contrib.auth import login as auth_login
+from django.contrib.auth import logout as auth_logout
+from django.contrib.auth import update_session_auth_hash
+from django.contrib.auth.decorators import login_required, permission_required
+from django.contrib.auth.forms import (AuthenticationForm, PasswordChangeForm,
+                                       PasswordResetForm, SetPasswordForm)
 from django.contrib.auth.tokens import default_token_generator
-
-
-
+from django.core.exceptions import ValidationError
+from django.http.response import HttpResponseRedirect
+from django.shortcuts import HttpResponse, redirect, render, resolve_url
 from django.urls import reverse_lazy
 from django.utils.decorators import method_decorator
-
+from django.utils.http import urlsafe_base64_decode
 from django.utils.translation import gettext_lazy as _
 from django.views.decorators.cache import never_cache
 from django.views.decorators.csrf import csrf_protect
 from django.views.decorators.debug import sensitive_post_parameters
 from django.views.generic.base import TemplateView
 from django.views.generic.edit import FormView
+from Projectweb.equipos.models import Equipo
 
+from .forms import CustomeUserForm, EquipoForm, TeamsForm
+from .models import Teams
 
 # Create your views here.
 #Profe aca hicimos una prueba de merge con errores (adrer)
