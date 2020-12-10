@@ -48,6 +48,8 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'ProyectowebApp.apps.ProyectowebappConfig',
     'equipos',
+    'rest_framework',
+    'api.apps.ApiConfig',
 ]
 
 MIDDLEWARE = [
@@ -139,9 +141,7 @@ STATIC_URL = '/static/'
 MEDIA_ROOT = BASE_DIR / 'media' # is equal to os.path.join(BASE_DIR, 'media/')
 MEDIA_URL = '/media/'
 
-EMAIL_USE_TLS = True
-EMAIL_HOST = 'smtp.gmail.com'
-EMAIL_PORT = 25
-EMAIL_HOST_ = 'basti.diazc@alumnos.duoc.cl'
-EMAIL_HOST_PASSWORD = 'perronaruto.'
-EMAIL_BACKEND = 'django.core.email.backends.smtp.EmailBackend'
+REST_FRAMEWORK = {
+    'DEFAULT_PAGINATION_CLASS': 'rest_framework.pagination.PageNumberPagination',
+    'PAGE_SIZE': 10
+}
