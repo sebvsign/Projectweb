@@ -21,6 +21,7 @@ urlpatterns = [
     path('', include('ProyectowebApp.urls')),
     path('accounts/', include('django.contrib.auth.urls')),
     path('api/', include('api.urls')),
+    path('', include('pwa.urls')),
     
 ]
 admin.site.site_header = "Administracion de Valorant"
