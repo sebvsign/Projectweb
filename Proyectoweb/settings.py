@@ -51,7 +51,6 @@ INSTALLED_APPS = [
     'equipos',
     'rest_framework',
     'api.apps.ApiConfig',
-    'pwa',
 ]
 
 MIDDLEWARE = [
