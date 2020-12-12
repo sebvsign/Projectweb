@@ -42,6 +42,14 @@
             <a href="{% url 'Listado_equipos' %}">Listado de equipos, Modificar y Eliminar</a>
             {% if user.is_authenticated %}
                 <a href="#">Usuario: {{ user.username }}</a>
+
+                {% for auth in backends.associated %}
+
+                    {% if auth.provider == 'facebook' %}
+                        <img src="{{ auth.extra_data.picture.data.url }}" alt="" width="50" height="50">
+                        {% endif %}
+
+                {% endfor %}
                 
                 <a href="{% url 'logout' %}">Cerrar sesión</a>
             {% else %}

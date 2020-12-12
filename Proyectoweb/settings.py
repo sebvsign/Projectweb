@@ -38,6 +38,12 @@ LOGIN_REDIRECT_URL = '/'
 LOGOUT_REDIRECT_URL = '/'
 
 
+#Facebook login
+SOCIAL_AUTH_FACEBOOK_KEY = "146584833566589"
+SOCIAL_AUTH_FACEBOOK_SECRET = "830b5042c1d323d14f8193c1508ca57a"
+
+
+
 # Application definition
 
 INSTALLED_APPS = [
@@ -52,6 +58,7 @@ INSTALLED_APPS = [
     'rest_framework',
     'api.apps.ApiConfig',
     'pwa',
+    'social_django',
 ]
 
 MIDDLEWARE = [
@@ -62,6 +69,7 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'social_django.middleware.SocialAuthExceptionMiddleware',
 ]
 
 ROOT_URLCONF = 'Proyectoweb.urls'
@@ -77,10 +85,29 @@ TEMPLATES = [
                 'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
+                'social_django.context_processors.backends', 
+                'social_django.context_processors.login_redirect',
+
             ],
         },
     },
 ]
+
+#Foto facebook
+SOCIAL_AUTH_FACEBOOK_SCOPE = ['email', 'user_link'] 
+
+SOCIAL_AUTH_FACEBOOK_PROFILE_EXTRA_PARAMS = {  
+  'fields': 'id, name, email, picture.type(large), link'
+}
+
+
+SOCIAL_AUTH_FACEBOOK_EXTRA_DATA = [               
+    ('name', 'name'),
+    ('email', 'email'),
+    ('picture', 'picture'),
+    ('link', 'profile_url'),
+]
+
 
 WSGI_APPLICATION = 'Proyectoweb.wsgi.application'
 
@@ -149,3 +176,8 @@ REST_FRAMEWORK = {
 }
 
 PWA_SERVICE_WORKER_PATH = os.path.join(BASE_DIR, 'serviceworker.js')
+
+AUTHENTICATION_BACKENDS = [
+    'social_core.backends.facebook.FacebookOAuth2',
+    'django.contrib.auth.backends.ModelBackend',
+]

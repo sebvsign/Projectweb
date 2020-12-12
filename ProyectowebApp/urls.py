@@ -5,6 +5,7 @@ from ProyectowebApp import views
 from django.conf import settings
 from django.conf.urls.static import static
 from django.contrib import admin
+from .views import error_facebook
 
 urlpatterns = [
     path('', views.index, name="Index"),
@@ -17,6 +18,7 @@ urlpatterns = [
     path('equipos_modificar/<id>/',views.equipos_modificar, name="Equipo_Modificar"),
     path('equipos_eliminar/<id>/',views.equipos_eliminar, name="Equipo_Eliminar"),
     path('registro',views.registro_usuario, name="registro_usuario"),
+    path('error-facebook/', error_facebook, name= 'error_facebook')
     ]
 
 

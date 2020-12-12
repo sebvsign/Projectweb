@@ -17,6 +17,11 @@ from .forms import CustomeUserForm, EquipoForm
 # Create your views here.
 #Profe aca hicimos una prueba de merge con errores (adrer)
 
+def error_facebook(request):
+    return render(request, 'registration/error_facebook.html')
+
+
+
 def index(request):
 
     return render(request, "ProyectowebApp/index.html")
