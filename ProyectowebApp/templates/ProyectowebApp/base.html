@@ -19,11 +19,17 @@
     <!--??? IMAGEN DEL ICONO NAVE ???-->
     <link rel="shortcut icon" href="{% static 'ProyectowebApp/img/ICONO_VALORANT.jpg' %}" type="image/x-icon">
     <!--??? LINK PARA CONECTAR CSS ???-->
+    <link rel="stylesheet" href="{% static 'css/estilos.css' %}">
+    <link rel="stylesheet" href="{% static 'static/css/btnpwa.css' %}">
     <link rel="stylesheet" href="{% static 'ProyectowebApp/css/estilos.css' %}">
     <link rel="stylesheet" href="{% static 'ProyectowebApp/css/styleForm.css' %}">
     <link rel="stylesheet" href="{% static 'ProyectowebApp/css/galeria.css' %}">
     <link rel="stylesheet" href="{% static 'ProyectowebApp/css/Estilo EJ.css' %}">
-        
+    
+
+
+    <link rel="stylesheet" href="{% static 'librerias/fontawesome/all.min.css' %}">
+   
 
     <link href="https://fonts.googleapis.com/css?family=Raleway:500,700,800,900&amp;display=swap" rel="stylesheet">
 </head>
@@ -89,7 +95,6 @@
 
 
         {% endblock %}
-        
     <footer>
         <div class="contenedor-footer">
             <div class="content-foo">
@@ -109,13 +114,24 @@
                 <p>00100000 </p>
                 <p>01101101 01110101 01101110 01100100 01101111</p>
             </div>
+            <div id="prompt" class="prompt hide bg-light border-top">
+            <div class="font-weight-bold">Agregar Aplicación</div>
+            <small>Esta aplicación web puede ser instalada</small>
+            <div class="text-right">
+                <button id="buttonCancel" type="button" class="font-weight-bold text-muted btn-sm btn btn-link">CANCELAR</button>
+                <button id="buttonAdd" type="button" class="font-weight-bold text-primary btn-sm btn btn-link">ACEPTAR</button>
+            </div>
+        </div> 
         </div>
+         
+
         <h2 class="titulo-final">&copy; Saludos Profe Ale </h2>
     </footer>
     </div>
 
 
 
-
+<script src="{% static 'js/btnpwa.js' %}" ></script>
 </body>
+
 </html>

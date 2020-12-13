@@ -160,6 +160,12 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/3.1/howto/static-files/
 
 STATIC_URL = '/static/'
+STATIC_ROOT = BASE_DIR / 'static'
+
+STATICFILES_DIRS = (
+    BASE_DIR / "common_static",
+)
+
 
 BASE_DIR = Path(__file__).resolve(strict=True).parent.parent
 # which shows the root directory of your project
@@ -176,6 +182,39 @@ REST_FRAMEWORK = {
 }
 
 PWA_SERVICE_WORKER_PATH = os.path.join(BASE_DIR, 'serviceworker.js')
+
+#Configuracion del manifiest PWA
+PWA_APP_NAME = 'Proyectweb'
+PWA_APP_DESCRIPTION = "App de valorant"
+PWA_APP_THEME_COLOR = '#642a73'
+PWA_APP_BACKGROUND_COLOR = '#FAE6E1'
+PWA_APP_DISPLAY = 'standalone'
+PWA_APP_SCOPE = '/'
+PWA_APP_ORIENTATION = 'any'
+PWA_APP_START_URL = '/'
+PWA_APP_STATUS_BAR_COLOR = 'default'
+PWA_APP_ICONS = [
+    {
+        'src': '/static/imagenes/ICONO_VALORANT.jpg',
+        'sizes': '160x160'
+    }
+]
+PWA_APP_ICONS_APPLE = [
+    {
+        'src': '/static/imagenes/ICONO_VALORANT.jpg',
+        'sizes': '160x160'
+    }
+]
+PWA_APP_SPLASH_SCREEN = [
+    {
+        'src': '/static/imagenes/ICONO_VALORANT.jpg',
+        'media': '(device-width: 320px) and (device-height: 568px) and (-webkit-device-pixel-ratio: 2)'
+    }
+]
+PWA_APP_DIR = 'ltr'
+PWA_APP_LANG = 'es-cl'
+PWA_APP_DEBUG_MODE = True
+
 
 AUTHENTICATION_BACKENDS = [
     'social_core.backends.facebook.FacebookOAuth2',

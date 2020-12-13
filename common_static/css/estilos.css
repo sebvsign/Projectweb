@@ -1,0 +1,74 @@
+.navbar-brand img {
+    max-height: 30px;
+}
+.bg-light {
+    background-color: #85D4B7!important;
+}
+.navbar-light .navbar-nav .nav-link {
+    color: #FFF;
+}
+
+.redes {
+    background-color: #6CCBA9;
+    text-align: center;
+    padding: 0.3em;
+}
+.redes .circulo {
+    background-color: #FFF;
+    color: #85D4B7;
+    display: inline-block;
+    border-radius: 2em;
+    width: 2em;
+    height: 2em;
+    font-size: 1.2em;
+    line-height: 2em;
+    text-align: center;
+    padding: 0;
+    margin: 0.3em;
+}
+
+.contenido {
+    padding: 1em;
+}
+
+.contenido h6 {
+    color: lightgrey;
+}
+.contenido hr {
+    width: 15%;
+    margin: 1em 0;
+    border-top: 2px solid #BBB;
+}
+
+.rescate {
+    text-align: right;
+}
+.rescate hr{
+    float: right;
+}
+.crowdfunding {
+    text-align: left;
+}
+
+.galeria {
+    background-color: #6CCBA9;
+    padding: 2em;
+}
+
+.contacto {
+    padding: 2em;
+    margin-top: 40px;
+}
+
+.footer {
+    padding: 1.5em;
+    text-align: center;
+}
+
+div.admin {
+    padding: 2em;
+    margin-top: 40px;
+}
+.opaco {
+    opacity: 50%;
+}
