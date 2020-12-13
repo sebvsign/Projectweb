@@ -7,7 +7,7 @@ var urlsToCache = [
     '/equipos',
     '/registro',
     '/static/ProyectowebApp/css/estilos.css',
-    
+    '/static/ProyectowebApp/img',
 ];
 
 self.addEventListener('install', function(event) {
